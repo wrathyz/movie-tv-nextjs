@@ -36,7 +36,7 @@ export default async function PlayerPage({ params }: Props) {
         controls
         preload="none"
       >
-        <source src={'/videos/' + file} type="video/mp4" />
+        <source src={`/${movie.slug}/${file}`} type="video/mp4" />
       </video>
 
       <Back />
