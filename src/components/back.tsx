@@ -16,7 +16,7 @@ export default function Back(p: { visible?: boolean }) {
       <div className={clsx('w-full group', p.visible ? 'p-8' : 'min-h-64 p-12')}>
         <button
           className={clsx(
-            ' text-white text-5xl font-bold py-2 px-4 rounded',
+            'cursor-pointer text-white text-5xl font-bold py-2 px-4 rounded',
             p.visible ? '' : 'hidden group-hover:block'
           )}
           onClick={router.back}
