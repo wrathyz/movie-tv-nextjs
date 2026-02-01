@@ -15,7 +15,7 @@ export async function generateMetadata(p: Props): Promise<Metadata> {
   const index = movie?.files.findIndex((v) => v == params.file) || 0
 
   return {
-    title: movie?.title + ' EP.' + (index + 1),
+    title: movie?.title + ' - EP.' + (index + 1),
     description: `${movie?.title}`,
   }
 }

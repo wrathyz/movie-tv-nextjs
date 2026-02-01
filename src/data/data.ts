@@ -4,5 +4,6 @@ export const movies: {
   thumb: string
   release_date: string
   runtime: string
+  type: 'show' | 'movie'
   files: string[]
 }[] = []

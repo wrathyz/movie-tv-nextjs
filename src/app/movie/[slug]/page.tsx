@@ -65,8 +65,8 @@ export default async function MovieDetail({ params }: Props) {
         </div>
       </div>
 
-      <div className="container mx-auto p-4 md:p-8 mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Episodes</h2>
+      <div className="group container mx-auto p-4 md:p-8 mt-8" data-state={movie.type}>
+        <h2 className="text-2xl font-semibold mb-4 group-data-[state=movie]:hidden">Episodes</h2>
         <ul className="space-y-3">
           {movie.files.map((v, i) => (
             <li
@@ -75,7 +75,8 @@ export default async function MovieDetail({ params }: Props) {
             >
               <Link href={`/movie/${slug}/${v}`}>
                 <div className="p-4">
-                  <h3 className="text-xl font-medium">EP.{i + 1}</h3>
+                  <h3 className="hidden text-xl font-medium group-data-[state=show]:block">EP.{i + 1}</h3>
+                  <h3 className="hidden text-xl font-medium group-data-[state=movie]:block">Play</h3>
                 </div>
               </Link>
             </li>
