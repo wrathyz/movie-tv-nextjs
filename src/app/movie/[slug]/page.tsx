@@ -35,7 +35,7 @@ export default async function MovieDetail({ params }: Props) {
       <div className="container mx-auto p-4 md:p-8">
         <div className="flex flex-col md:flex-row gap-8">
           <Image
-            src={movie.thumb}
+            src={movie.cover}
             alt={movie.title}
             width={500}
             height={500}
